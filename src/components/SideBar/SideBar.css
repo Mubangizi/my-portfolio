@@ -1,0 +1,54 @@
+.SideBar {
+  background-color: rgb(3, 42, 54);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  border-right: 1px solid #bbb;
+}
+
+.UserImage {
+  padding: 20px;
+  border-bottom: 1px solid #bbb;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.UserImage .MuiAvatar-root {
+  height: 190px;
+  width: 190px;
+  border: 6px solid rgb(0, 105, 241, 0.5);
+}
+.NavItems {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  margin: 5px;
+}
+a {
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #eee;
+  padding: 13px 0;
+  outline: none;
+  font-size: 19px;
+}
+a:hover {
+  background-color: rgb(8, 197, 255);
+}
+.active {
+  background-color: rgb(8, 197, 255);
+}
+
+.RemarksSection {
+  border-top: 1px solid #bbb;
+  bottom: 0 !important;
+}
+.RemarksSection p {
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}

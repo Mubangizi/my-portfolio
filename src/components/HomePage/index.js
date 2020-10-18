@@ -1,13 +1,16 @@
 import React from "react";
 import "./Home.css";
-import picture from "../../assets/images/me.jpg";
+import SideBar from "../SideBar";
 
-function App() {
+function Home() {
   return (
-    <div>
-      <h1>Welcome</h1>
+    <div className="Home">
+      <SideBar />
+      <div className="HomeMainContent">
+        <h1>Welcome To My Page</h1>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default Home;
