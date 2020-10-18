@@ -38,13 +38,15 @@
 
 .AboutServices {
   display: flex;
-  gap: 40px;
+  gap: 25px;
+  justify-self: start;
 }
 
 .ServiceCard {
   border: 1px solid #90a4ae;
   border-top: 5px solid #90a4ae;
   padding: 15px;
+  flex: 1;
 }
 .ServiceCard:hover {
   border-top: 5px solid #0288d1;

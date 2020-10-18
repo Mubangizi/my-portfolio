@@ -1,10 +1,13 @@
+.PortfolioCard {
+  max-width: 320px;
+}
 .PortfolioCard img {
   max-width: 320px;
   display: block;
 }
 .PortfolioCard img:hover {
-  transform: scale(1.03);
-  transition: 0.2s ease-in;
+  transform: scale(1.02);
+  transition: 0.1s ease-in;
 }
 .PortfolioCard h3 {
   margin: 2px 0;

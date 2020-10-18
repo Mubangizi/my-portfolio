@@ -1,0 +1,30 @@
+.CertificateCard {
+  max-width: 320px;
+}
+.CertificateCard img {
+  max-width: 320px;
+  display: block;
+}
+.CertificateCard img:hover {
+  transform: scale(1.02);
+  transition: 0.1s ease-in;
+}
+.CertificateCard h3 {
+  margin: 5px 0;
+  font-size: 20px;
+  display: inline;
+}
+.CertificateCard h3:hover {
+  color: #0288d1;
+}
+.CertificateCard h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+.CertificateCard p {
+  margin: 0;
+}
+.CertDate {
+  font-size: 14px;
+  color: #bbb;
+}

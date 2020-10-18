@@ -1,4 +1,5 @@
 import React from "react";
+import CertificateCard from "../CertificateCard";
 import Layout from "../Layout";
 import PortfolioCard from "../PortfolioCard";
 
@@ -28,6 +29,35 @@ const Portfolio = () => {
       info: "A content povider for African shows",
     },
   ];
+  const cerfificates = [
+    {
+      name: "Technical Support Fundamentals",
+      issuing_organisation: "Coursera",
+      image: "tech_support.png",
+      issue_date: "August 2020",
+      credential_url:
+        "https://www.coursera.org/account/accomplishments/certificate/Y6KPHEHRJTEG",
+      credential_id: "Y6KPHEHRJTEG",
+    },
+    {
+      name: "Architecting with Google Kubernetes Engine: Foundations",
+      issuing_organisation: "Coursera",
+      image: "kubernetes_cert.png",
+      issue_date: "August 2020",
+      credential_url:
+        "https://www.coursera.org/account/accomplishments/certificate/Y3BMNVCBKRGB",
+      credential_id: "Y3BMNVCBKRGB",
+    },
+    {
+      name: "Python Data Structures",
+      issuing_organisation: "Coursera",
+      image: "data_structures_cert.png",
+      issue_date: "September 2020",
+      credential_url:
+        "https://www.coursera.org/account/accomplishments/certificate/FEQSREM526PE",
+      credential_id: "FEQSREM526PE",
+    },
+  ];
   return (
     <Layout>
       <div className="Portfolio">
@@ -39,6 +69,19 @@ const Portfolio = () => {
               image={portfolio.image}
               url={portfolio.url}
               info={portfolio.info}
+            />
+          ))}
+        </div>
+        <h1 className="SectionHeader certification">Certificates</h1>
+        <div className="PortfolioProjects">
+          {cerfificates.map((certificate) => (
+            <CertificateCard
+              name={certificate.name}
+              org={certificate.issuing_organisation}
+              date={certificate.issue_date}
+              credential_url={certificate.credential_url}
+              id={certificate.credential_id}
+              image={certificate.image}
             />
           ))}
         </div>

@@ -11,3 +11,7 @@
 .projects::before {
   content: "projects";
 }
+
+.certification::before {
+  content: "projects";
+}
