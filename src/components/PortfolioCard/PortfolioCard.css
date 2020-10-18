@@ -1,0 +1,23 @@
+.PortfolioCard img {
+  max-width: 320px;
+  display: block;
+}
+.PortfolioCard img:hover {
+  transform: scale(1.03);
+  transition: 0.2s ease-in;
+}
+.PortfolioCard h3 {
+  margin: 2px 0;
+  font-size: 25px;
+  display: inline;
+}
+.PortfolioCard h3:hover {
+  color: #0288d1;
+}
+.PortfolioCard h3 a {
+  text-decoration: none;
+  color: inherit;
+}
+.PortfolioCard p {
+  margin: 0;
+}

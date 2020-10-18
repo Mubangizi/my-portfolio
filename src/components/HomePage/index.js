@@ -1,6 +1,5 @@
 import React from "react";
 import "./Home.css";
-import SideBar from "../SideBar";
 import Layout from "../Layout";
 
 function Home() {

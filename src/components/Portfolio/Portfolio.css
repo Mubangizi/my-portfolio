@@ -1,0 +1,13 @@
+.Portfolio {
+  width: 100%;
+}
+.Portfolio .PortfolioProjects {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.projects::before {
+  content: "projects";
+}

@@ -11,9 +11,7 @@ const SideBar = () => {
         <Avatar src={picture} />
       </div>
       <div className="NavItems">
-        <NavLink to={{ pathname: `/` }} activeClassName="active">
-          Home
-        </NavLink>
+        <NavLink to={{ pathname: `/` }}>Home</NavLink>
         <NavLink to={{ pathname: `/about` }}>About</NavLink>
         <NavLink to={{ pathname: `/resume` }}>Resume</NavLink>
         <NavLink to={{ pathname: `/portfolio` }}>Portfolios</NavLink>
