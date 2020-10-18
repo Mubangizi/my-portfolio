@@ -1,16 +1,18 @@
 .SideBar {
-  background-color: rgb(3, 42, 54);
-  min-height: 100vh;
+  background-color: #2e414d;
+  position: fixed;
+  top: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
-  border-right: 1px solid #bbb;
+  border-right: 1px solid #90a4ae;
 }
 
 .UserImage {
   padding: 20px;
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #90a4ae;
   margin: 0;
   display: flex;
   justify-content: center;
@@ -18,7 +20,7 @@
 .UserImage .MuiAvatar-root {
   height: 190px;
   width: 190px;
-  border: 6px solid rgb(0, 105, 241, 0.5);
+  border: 6px solid rgb(144, 164, 174, 0.3);
 }
 .NavItems {
   display: flex;
@@ -37,14 +39,14 @@ a {
   font-size: 15px;
 }
 a:hover {
-  background-color: rgb(8, 197, 255, 0.4);
+  background-color: rgb(2, 136, 209, 0.2);
 }
 .active {
-  background-color: rgb(8, 197, 255);
+  background-color: #0288d1;
 }
 
 .RemarksSection {
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #90a4ae;
   bottom: 0 !important;
 }
 .RemarksSection p {

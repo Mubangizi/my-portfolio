@@ -1,9 +1,40 @@
 .Layout {
-  display: grid;
-  grid-template-columns: 20% 1fr;
+  /* display: grid;
+  grid-template-columns: 20% 1fr; */
   width: 100%;
   height: 100vh;
 }
 main {
   min-height: 100vh;
+  padding: 0 15px;
+  margin-left: 20%;
+}
+
+.SectionHeader {
+  font-size: 45px;
+  position: relative;
+  margin-bottom: 60px;
+  margin-top: 80px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.SectionHeader::before {
+  text-transform: uppercase;
+  position: absolute;
+  display: block;
+  content: attr();
+  content: "";
+  font-size: 75px;
+  z-index: -1;
+  opacity: 0.1;
+  margin-top: 33px;
+}
+.SectionHeader::after {
+  display: block;
+  content: "";
+  height: 5px;
+  border-radius: 10px;
+  background-color: #0288d1;
+  width: 130px;
+  margin-top: 10px;
 }
