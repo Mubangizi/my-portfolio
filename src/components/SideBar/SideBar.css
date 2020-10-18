@@ -34,10 +34,10 @@ a {
   color: #eee;
   padding: 13px 0;
   outline: none;
-  font-size: 19px;
+  font-size: 15px;
 }
 a:hover {
-  background-color: rgb(8, 197, 255);
+  background-color: rgb(8, 197, 255, 0.4);
 }
 .active {
   background-color: rgb(8, 197, 255);

@@ -1,10 +1,15 @@
-.Home {
-  display: grid;
-  grid-template-columns: 20% 1fr;
-  width: 100%;
-  height: 100vh;
-}
-
 .HomeMainContent {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 0 100px;
+}
+.HomeMainContent h1 {
+  margin: 0;
+}
+p {
+  line-height: 30px;
 }
