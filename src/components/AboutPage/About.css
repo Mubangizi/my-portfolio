@@ -24,6 +24,9 @@
 .AboutSection h3 {
   font-size: 35px;
   margin: 0;
+  color: white;
+  font-weight: normal;
+  cursor: pointer;
 }
 
 .AboutTable .AboutTableLable {
@@ -43,13 +46,14 @@
 }
 
 .ServiceCard {
-  border: 1px solid #90a4ae;
-  border-top: 5px solid #90a4ae;
+  border: 1px solid var(--color-background-light);
+  border-top: 5px solid var(--color-background-light);
   padding: 15px;
   flex: 1;
+  cursor: pointer;
 }
 .ServiceCard:hover {
-  border-top: 5px solid #0288d1;
+  border-top: 5px solid var(--color-blue);
 }
 
 .ServiceCard h4 {
@@ -57,13 +61,14 @@
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
+  color: white;
 }
 .ServiceCard h4::after {
   display: block;
   content: "";
   height: 1px;
   border-radius: 10px;
-  background-color: #90a4ae;
+  background-color: var(--color-background-light);
   width: 50px;
   margin-top: 10px;
 }
