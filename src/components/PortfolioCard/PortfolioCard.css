@@ -10,12 +10,12 @@
   transition: 0.1s ease-in;
 }
 .PortfolioCard h3 {
-  margin: 2px 0;
+  margin: 10px 0;
   font-size: 25px;
-  display: inline;
+  color: white;
 }
 .PortfolioCard h3:hover {
-  color: #0288d1;
+  color: var(--color-blue);
 }
 .PortfolioCard h3 a {
   text-decoration: none;

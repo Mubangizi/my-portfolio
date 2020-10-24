@@ -1,7 +1,9 @@
 import React from "react";
 import Layout from "../Layout";
 import picture from "../../assets/images/me.jpg";
-// import Construction from "@material-ui/icons/Construction";
+import CodeOutlinedIcon from "@material-ui/icons/CodeOutlined";
+import BuildOutlinedIcon from "@material-ui/icons/BuildOutlined";
+import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
 import "./About.css";
 
 const AboutPage = () => {
@@ -52,7 +54,9 @@ const AboutPage = () => {
         <h1 className="SectionHeader services">Services</h1>
         <div className="AboutServices">
           <div className="ServiceCard">
-            <div className="ServiceIcon"></div>
+            <div className="ServiceIcon">
+              <DescriptionOutlinedIcon />
+            </div>
             <h4 className="ServiceTitle">Web design</h4>
             <p className="ServiceInfo">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -60,7 +64,9 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="ServiceCard">
-            <div className="ServiceIcon"></div>
+            <div className="ServiceIcon">
+              <CodeOutlinedIcon />
+            </div>
             <h4 className="ServiceTitle">Web Development</h4>
             <p className="ServiceInfo">
               Lorem ipsum dolor sit amet consectetur adipisicing eli recusandae
@@ -68,7 +74,10 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="ServiceCard">
-            <div className="ServiceIcon"></div>
+            <div className="ServiceIcon">
+              <BuildOutlinedIcon />
+            </div>
+
             <h4 className="ServiceTitle">Backend Systems</h4>
             <p className="ServiceInfo">
               Lorem ipsum dolor sit amet consectetur adipisicin recusandae
