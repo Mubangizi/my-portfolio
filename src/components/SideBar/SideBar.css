@@ -12,7 +12,7 @@
 
 .UserImage {
   padding: 20px;
-  border-bottom: 1px solid var(--color-background-light);
+  border-bottom: 1px solid var(--color-background-light) !important;
   margin: 0;
   display: flex;
   justify-content: center;

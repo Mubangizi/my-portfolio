@@ -5,7 +5,10 @@ const PortfolioCard = ({ image, title, url, info }) => {
   return (
     <div className="PortfolioCard">
       <a href={url} rel="noopener noreferrer" target="_blank">
-        <img src={image} alt={title} />
+        <img
+          src={require(`../../assets/images/projects/${image}`)}
+          alt={title}
+        />
       </a>
       <h3>
         <a href={url} rel="noopener noreferrer" target="_blank">

@@ -51,14 +51,15 @@ const Contact = () => {
               </span>
               <div className="ContactCardInfo">
                 <h3>Phone</h3>
-                <p>+256705754073</p>
+                <p>+256-705754073</p>
+                <p>+256-770718905</p>
               </div>
             </div>
             <div className="ContactCard">
               <span className="ContactCardIcon">
                 <EmailOutlinedIcon />
               </span>
-              <div className="ContactCardInfo">
+              <div className="ContactCardInfo ContactEmail">
                 <h3>Email</h3>
                 <p>mubangizia22@gmail.com</p>
               </div>

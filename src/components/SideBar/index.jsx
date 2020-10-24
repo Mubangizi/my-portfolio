@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Avatar } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import picture from "../../assets/images/me.jpg";
 import "./SideBar.css";
 
@@ -8,7 +8,9 @@ const SideBar = () => {
   return (
     <div className="SideBar">
       <div className="UserImage">
-        <Avatar src={picture} />
+        <IconButton>
+          <Avatar src={picture} />
+        </IconButton>
       </div>
       <div className="NavItems">
         <NavLink to={{ pathname: `/` }} exact={true}>
