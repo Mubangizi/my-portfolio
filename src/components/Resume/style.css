@@ -1,0 +1,40 @@
+.resume::before {
+  content: "resume";
+}
+
+.MuiTimeline-root {
+  padding: 6px 0 !important;
+}
+
+.Resume .MuiTimelineItem-missingOppositeContent:before {
+  flex: 0 !important;
+  padding: 6px 0 !important;
+}
+
+.ResumeTitle {
+  font-size: 35px;
+}
+.ResumeTitle .MuiSvgIcon-root {
+  font-size: 30px;
+  margin-top: 6px;
+}
+.TimePath {
+  display: flex;
+}
+
+.TimePath .PathDateTime {
+  width: 300px;
+  font-size: 18px;
+}
+
+.OtherContent h2 {
+  margin-bottom: 10px;
+  color: #0288d1;
+  margin-top: 0;
+  cursor: pointer;
+}
+.OtherContent h4 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
