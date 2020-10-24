@@ -56,6 +56,11 @@
   border-top: 5px solid var(--color-blue);
 }
 
+.ServiceCard .ServiceIcon .MuiSvgIcon-root {
+  font-size: 40px;
+  color: var(--color-blue);
+}
+
 .ServiceCard h4 {
   text-transform: capitalize;
   font-size: 24px;
