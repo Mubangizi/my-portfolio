@@ -9,12 +9,13 @@ main {
   padding: 40px 0;
   margin-left: 20%;
 }
-
-main > .MuiButtonBase-root {
-  padding: 10px;
-  background-color: var(--color-background);
-  border-radius: 0;
-  border: 1px solid var(--color-background-light);
+@media (max-width: 1195px) {
+  main {
+    margin-left: 0;
+  }
+  .SideBar {
+    width: 350px;
+  }
 }
 .SectionHeader {
   font-size: 45px;

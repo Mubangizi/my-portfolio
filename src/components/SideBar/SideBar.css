@@ -1,7 +1,8 @@
 .SideBar {
   position: fixed;
-  z-index: 1;
   top: 0;
+  left: 0;
+  z-index: 1;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -15,15 +16,13 @@
   align-content: center;
   background: var(--color-background);
   border-right: 1px solid var(--color-background-light);
+  height: 100vh;
 }
 
 .SideControllerBtn {
+  visibility: hidden;
   z-index: 999;
   margin-top: 10px;
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 25px; */
-  /* font-size: 36px; */
 }
 .SideControllerBtn .MuiIconButton-edgeStart {
   margin-left: -2px;
@@ -38,30 +37,26 @@
 .SideControllerBtn > .MuiButtonBase-root:hover {
   background-color: var(--color-background);
 }
-.Side-false {
-  width: 0 !important;
-  display: none;
-}
-.Side-true {
-  width: 250px !important;
-}
 
 @media (max-width: 1195px) {
   .SideBarContent {
-    height: 100%;
+    height: 100vh !important;
     width: 0;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     overflow-x: hidden;
     transition: 0.8s;
   }
 
   .SideControllerBtn {
-    z-index: 999;
-    top: 0;
-    /* left: 225px; */
-    font-size: 36px;
-    /* margin-right: 250px; */
+    visibility: visible;
+  }
+  .Side-false {
+    width: 0 !important;
+    display: none;
+  }
+  .Side-true {
+    width: 100% !important;
   }
 }
 
