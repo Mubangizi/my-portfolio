@@ -82,6 +82,15 @@ export const portfolios = [
 
 export const cerfificates = [
   {
+    name: "Python Data Structures",
+    issuing_organisation: "Coursera",
+    image: "data_structures_cert.png",
+    issue_date: "September 2020",
+    credential_url:
+      "https://www.coursera.org/account/accomplishments/certificate/FEQSREM526PE",
+    credential_id: "FEQSREM526PE",
+  },
+  {
     name: "Technical Support Fundamentals",
     issuing_organisation: "Coursera",
     image: "tech_support.png",
@@ -98,14 +107,5 @@ export const cerfificates = [
     credential_url:
       "https://www.coursera.org/account/accomplishments/certificate/Y3BMNVCBKRGB",
     credential_id: "Y3BMNVCBKRGB",
-  },
-  {
-    name: "Python Data Structures",
-    issuing_organisation: "Coursera",
-    image: "data_structures_cert.png",
-    issue_date: "September 2020",
-    credential_url:
-      "https://www.coursera.org/account/accomplishments/certificate/FEQSREM526PE",
-    credential_id: "FEQSREM526PE",
   },
 ];
