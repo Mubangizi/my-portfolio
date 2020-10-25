@@ -63,6 +63,14 @@
   margin: 0;
 }
 
+@media (max-width: 773px) {
+  .ContactArea {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
 .ContactCard {
   padding: 30px;
   background-color: var(--color-background);

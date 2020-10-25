@@ -38,7 +38,7 @@
   background-color: var(--color-background);
 }
 
-@media (max-width: 1195px) {
+@media (max-width: 1275px) {
   .SideBarContent {
     height: 100vh !important;
     width: 0;
