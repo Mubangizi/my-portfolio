@@ -8,7 +8,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 40px;
+  width: 100%;
 }
+
+@media (max-width: 543px) {
+  .SkillsList {
+    grid-template-columns: 1fr;
+  }
+}
+
 .SkillItem h3 {
   margin-bottom: 2px;
   color: white;
@@ -64,6 +72,13 @@
   font-size: 18px;
 }
 
+@media (max-width: 509px) {
+  .TimePath {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
 .OtherContent h2 {
   margin-bottom: 10px;
   color: var(--color-blue);
@@ -75,4 +90,5 @@
   font-size: 20px;
   margin-top: 0;
   margin-bottom: 0;
+  font-weight: normal;
 }

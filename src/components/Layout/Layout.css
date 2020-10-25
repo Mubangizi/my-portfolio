@@ -9,7 +9,14 @@ main {
   padding: 40px 0;
   margin-left: 20%;
 }
-
+@media (max-width: 1275px) {
+  main {
+    margin-left: 0;
+  }
+  .SideBar {
+    width: 350px;
+  }
+}
 .SectionHeader {
   font-size: 45px;
   position: relative;

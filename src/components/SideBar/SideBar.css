@@ -1,13 +1,61 @@
 .SideBar {
-  background: var(--color-background);
   position: fixed;
   top: 0;
+  left: 0;
+  z-index: 5;
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+}
+
+.SideBarContent {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
+  background: var(--color-background);
   border-right: 1px solid var(--color-background-light);
+  height: 100vh;
+}
+
+.SideControllerBtn {
+  visibility: hidden;
+  z-index: 999;
+  margin-top: 10px;
+}
+.SideControllerBtn .MuiIconButton-edgeStart {
+  margin-left: -2px;
+}
+.SideControllerBtn > .MuiButtonBase-root {
+  padding: 10px;
+  background-color: var(--color-background);
+  border-radius: 0;
+  border: 1px solid var(--color-background-light);
+  border-left: none;
+}
+.SideControllerBtn > .MuiButtonBase-root:hover {
+  background-color: var(--color-background);
+}
+
+@media (max-width: 1275px) {
+  .SideBarContent {
+    height: 100vh !important;
+    width: 0;
+    overflow-x: hidden;
+    transition: 0.8s;
+  }
+
+  .SideControllerBtn {
+    visibility: visible;
+  }
+  .Side-false {
+    width: 0 !important;
+    display: none;
+  }
+  .Side-true {
+    width: 100% !important;
+  }
 }
 
 .UserImage {
@@ -53,4 +101,10 @@
 .RemarksSection p {
   text-align: center;
   cursor: pointer;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+.RemarksSection p:hover {
+  color: white;
+  transition: 0.2s;
 }
