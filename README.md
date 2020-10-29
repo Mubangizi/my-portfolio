@@ -4,7 +4,7 @@
 
 A react application to showcase projects i have worked on.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Check the deployed version out [here](https://mubangiziallan.netlify.app/portfolio)
 
 ## Available Scripts
 
