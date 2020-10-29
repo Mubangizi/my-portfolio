@@ -11,12 +11,11 @@ const AboutPage = () => {
       <div className="About">
         <h1 className="SectionHeader about-me">About Me</h1>
         <div className="AboutSection">
-          <div>
-            <img
-              src="https://lh3.googleusercontent.com/igSWHP1BIjzOlW-jX0acOGEBi7ZIK3ie5EnZHbuP6Sllrt0L3cXUvmPfBBQRu2XVgd0Y0fKeijGTq6s-ehmuqwW7GfBhqXK27i_X27tFrNGrt36dM1kypWgvhL9sE4HS83aL3wm1XK7dstmvdS9VyNLzn02SF0tdC_qMA0IeApjiyLGtLnE1B92zF9yam3qsQ01ysNnJK84CWix6MxGQeLogRYIflqKlJWTmhkpirgZJpveCYdy7xKbsiH0fOzZASIEArKyECnIZXztsW8lK8cur-Y_qnQ4kl6Gs6Cge42Ab2CLY4MpVG6BziNyoDkTsyUl7QaE66lP8-QA3XSveanNwVjtK8-eb1yeRVMr5zx89iTvpn0GhQuiSNekJdTLKhCsZ3M0Y0mddYb8ttHr8NHgMY04jFoTPh25G6XmKbu87qA9G3kEdWXe6-5mtrQ9Ld3Bf2d02WgnCI_jess6z_0nNunLfzjq0x0gkeM0rhYtmkqk73Yail-6kPDyWk2wuNKT3s5aAKAQWMR-AbeDKHPzKhX3595DRGFuEhSrO1cpr3daxzcBV1U59qLAfJrLSca-6hFpa5dY1c4_zUbrrB54otSknRKOpXlE-F8v5Ts6fk6cEedBw6odLqtS72urUF-awltUTPC9k5CQWitK6qLb3v5dPEdqbgXwaJbighXZDpXdnRtnUMxpgva-5=w998-h748-no?authuser=0"
-              alt=""
-            />
-          </div>
+          <img
+            className="FrontImage"
+            src="https://lh3.googleusercontent.com/igSWHP1BIjzOlW-jX0acOGEBi7ZIK3ie5EnZHbuP6Sllrt0L3cXUvmPfBBQRu2XVgd0Y0fKeijGTq6s-ehmuqwW7GfBhqXK27i_X27tFrNGrt36dM1kypWgvhL9sE4HS83aL3wm1XK7dstmvdS9VyNLzn02SF0tdC_qMA0IeApjiyLGtLnE1B92zF9yam3qsQ01ysNnJK84CWix6MxGQeLogRYIflqKlJWTmhkpirgZJpveCYdy7xKbsiH0fOzZASIEArKyECnIZXztsW8lK8cur-Y_qnQ4kl6Gs6Cge42Ab2CLY4MpVG6BziNyoDkTsyUl7QaE66lP8-QA3XSveanNwVjtK8-eb1yeRVMr5zx89iTvpn0GhQuiSNekJdTLKhCsZ3M0Y0mddYb8ttHr8NHgMY04jFoTPh25G6XmKbu87qA9G3kEdWXe6-5mtrQ9Ld3Bf2d02WgnCI_jess6z_0nNunLfzjq0x0gkeM0rhYtmkqk73Yail-6kPDyWk2wuNKT3s5aAKAQWMR-AbeDKHPzKhX3595DRGFuEhSrO1cpr3daxzcBV1U59qLAfJrLSca-6hFpa5dY1c4_zUbrrB54otSknRKOpXlE-F8v5Ts6fk6cEedBw6odLqtS72urUF-awltUTPC9k5CQWitK6qLb3v5dPEdqbgXwaJbighXZDpXdnRtnUMxpgva-5=w998-h748-no?authuser=0"
+            alt=""
+          />
           <div className="AboutInfo">
             <h3> I am Mubangizi Allan</h3>
             <p>

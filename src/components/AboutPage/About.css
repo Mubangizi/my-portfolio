@@ -16,6 +16,7 @@
   grid-template-rows: 1fr;
   column-gap: 20px;
 }
+
 .AboutSection img {
   object-fit: fit;
   width: 100%;
@@ -26,14 +27,6 @@
   color: white;
   font-weight: normal;
   cursor: pointer;
-}
-
-@media (max-width: 800px) {
-  .AboutSection {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
 }
 
 .AboutTable .AboutTableLable {
@@ -48,17 +41,17 @@
 
 .AboutServices {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   gap: 25px;
   justify-self: start;
+  grid-template-columns: 1fr 1fr 1fr;
 }
-@media (max-width: 1001px) {
+
+@media (max-width: 847px) {
   .AboutServices {
     grid-template-columns: 1fr 1fr;
   }
 }
-
-@media (max-width: 767px) {
+@media (max-width: 635px) {
   .AboutServices {
     grid-template-columns: 1fr;
   }
@@ -69,7 +62,6 @@
   border-top: 5px solid var(--color-background-light);
   padding: 15px;
   flex: 1;
-  background-color: var(--color-background);
   cursor: pointer;
 }
 .ServiceCard:hover {
@@ -86,7 +78,6 @@
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 20px;
-  margin-top: 10px;
   color: white;
 }
 .ServiceCard h4::after {
