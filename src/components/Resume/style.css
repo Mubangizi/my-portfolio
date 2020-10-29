@@ -64,16 +64,18 @@
   font-size: 30px;
 }
 .TimePath {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 4.5fr;
+  gap: 10px;
 }
 
 .TimePath .PathDateTime {
-  width: 300px;
   font-size: 18px;
 }
 
 @media (max-width: 509px) {
   .TimePath {
+    display: flex;
     flex-direction: column;
     gap: 10px;
   }
