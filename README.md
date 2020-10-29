@@ -4,7 +4,7 @@
 
 A react application to showcase projects i have worked on.
 
-Check the deployed version out [here](https://mubangiziallan.netlify.app/portfolio)
+Check the deployed version out [here](https://mubangiziallan.netlify.app)
 
 ## Available Scripts
 
