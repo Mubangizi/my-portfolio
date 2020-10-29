@@ -20,8 +20,11 @@ const SideBar = () => {
     <div className="SideBar">
       <div className={`SideBarContent Side-${open}`}>
         <div className="UserImage">
-          <IconButton>
+          <IconButton className="UserImageBtn">
             <Avatar src={picture} />
+            <div className="UserImageOverlay">
+              <p className="UserImageText">Mubangizi Allan</p>
+            </div>
           </IconButton>
         </div>
         <div className="NavItems">
