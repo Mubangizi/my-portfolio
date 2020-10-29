@@ -1,6 +1,16 @@
-div {
-  min-height: 100vh;
+.HomeMainContent {
+  min-height: 80vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 0 100px;
+}
+.HomeMainContent h1 {
+  margin: 0;
+  color: white;
+}
+p {
+  line-height: 30px;
 }

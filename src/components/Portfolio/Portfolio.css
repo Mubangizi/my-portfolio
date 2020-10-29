@@ -1,0 +1,23 @@
+.Portfolio {
+  width: 100%;
+}
+.Portfolio .PortfolioProjects {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 755px) {
+  .Portfolio .PortfolioProjects {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.projects::before {
+  content: "projects";
+}
+
+.certification::before {
+  content: "certificates";
+}
