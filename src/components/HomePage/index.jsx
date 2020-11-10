@@ -18,13 +18,31 @@ function Home() {
         </p>
         <div className="MySocial">
           <IconButton>
-            <img src={GitLightIcon} alt="" />
+            <a
+              href="https://github.com/mubangizi"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={GitLightIcon} alt="" />
+            </a>
           </IconButton>
           <IconButton>
-            <img src={LinkedInLightIcon} alt="" />
+            <a
+              href="https://www.linkedin.com/in/mubangizi-allan-0ab932102/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={LinkedInLightIcon} alt="" />
+            </a>
           </IconButton>
           <IconButton>
-            <img src={TwitterLightIcon} alt="" />
+            <a
+              href="https://twitter.com/mubangiziallan"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img src={TwitterLightIcon} alt="" />
+            </a>
           </IconButton>
         </div>
       </div>

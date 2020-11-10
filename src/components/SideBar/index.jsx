@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import { Avatar, IconButton } from "@material-ui/core";
 import picture from "../../assets/images/me.jpg";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
@@ -8,6 +8,7 @@ import CloseOutlinedIcon from "@material-ui/icons/CloseOutlined";
 
 const SideBar = () => {
   const [open, setOpen] = React.useState(false);
+  const history = useHistory();
 
   const handleDrawer = () => {
     if (open === true) {
@@ -16,16 +17,29 @@ const SideBar = () => {
       setOpen(true);
     }
   };
+
+  const sendToHome = () => {
+    history.push("/");
+  };
   return (
     <div className="SideBar">
       <div className={`SideBarContent Side-${open}`}>
         <div className="UserImage">
-          <IconButton className="UserImageBtn">
+          <IconButton className="UserImageBtn" onClick={sendToHome}>
             <Avatar src={picture} />
             <div className="UserImageOverlay">
               <p className="UserImageText">Mubangizi Allan</p>
             </div>
           </IconButton>
+          <div className="UserGitProfile ItemUnderline">
+            <a
+              href="https://github.com/mubangizi"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              github.com/mubangizi
+            </a>
+          </div>
         </div>
         <div className="NavItems">
           <NavLink to={{ pathname: `/` }} exact={true}>
