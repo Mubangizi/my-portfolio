@@ -6,10 +6,12 @@ import "./Layout.css";
 const Layout = ({ children }) => {
   return (
     <div className="Layout">
-      <SideBar />
-      <main>
-        <Container>{children}</Container>
-      </main>
+      <div className="LiveBackground">
+        <SideBar />
+        <main>
+          <Container>{children}</Container>
+        </main>
+      </div>
     </div>
   );
 };

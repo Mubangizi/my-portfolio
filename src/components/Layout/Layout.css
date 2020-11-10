@@ -2,6 +2,12 @@
   width: 100%;
   height: 100vh;
 }
+.LiveBackground {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
 .SideBar {
   width: 20%;
 }
@@ -17,6 +23,7 @@ main {
     width: 350px;
   }
 }
+
 .SectionHeader {
   font-size: 45px;
   position: relative;
