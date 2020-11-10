@@ -78,6 +78,7 @@
   height: 190px;
   width: 190px;
   border: 7px solid var(--color-background-light);
+  object-fit: fit !important;
 }
 
 .UserImageBtn .UserImageOverlay {

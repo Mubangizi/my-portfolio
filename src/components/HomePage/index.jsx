@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import Layout from "../Layout";
+import { HomeLayout } from "../Layout";
 import GitLightIcon from "../../assets/icons/github_light.svg";
 import LinkedInLightIcon from "../../assets/icons/linkedin.svg";
 import TwitterLightIcon from "../../assets/icons/twitter.svg";
@@ -8,7 +8,7 @@ import { IconButton } from "@material-ui/core";
 
 function Home() {
   return (
-    <Layout>
+    <HomeLayout>
       <div className="HomeMainContent">
         <h1>Hi, I am Mubangizi Allan</h1>
         <p>
@@ -46,7 +46,7 @@ function Home() {
           </IconButton>
         </div>
       </div>
-    </Layout>
+    </HomeLayout>
   );
 }
 
