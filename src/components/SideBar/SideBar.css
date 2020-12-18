@@ -78,7 +78,11 @@
   height: 190px;
   width: 190px;
   border: 7px solid var(--color-background-light);
-  object-fit: fit !important;
+}
+.UserImage .MuiAvatar-img{
+  object-fit: contain !important;
+  transform: scale(1.4);
+  
 }
 
 .UserImageBtn .UserImageOverlay {
