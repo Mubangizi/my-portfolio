@@ -34,6 +34,7 @@ main {
   color: white;
   font-weight: normal;
 }
+
 .SectionHeader::before {
   text-transform: uppercase;
   position: absolute;
@@ -47,6 +48,7 @@ main {
   color: var(--color-background);
   margin-top: 33px;
 }
+
 .SectionHeader::after {
   display: block;
   content: "";
@@ -55,4 +57,16 @@ main {
   background-color: var(--color-blue);
   width: 100px;
   margin-top: 10px;
+}
+
+@media(max-width:488px){
+  .SectionHeader::before {
+    font-size: 55px;
+    width: 100%;
+    overflow: hidden !important;
+  }
+
+  .SectionHeader {
+    font-size: 38px;
+  }
 }
