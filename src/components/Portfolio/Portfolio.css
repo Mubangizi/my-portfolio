@@ -7,6 +7,15 @@
   flex-wrap: wrap;
 }
 
+@media (max-width:436px){
+  .Portfolio .PortfolioProjects {
+    width: 100%;
+  }
+  .PortfolioProjects .PortfolioCard{
+    width: 100% !important;
+  }
+}
+
 @media (max-width: 755px) {
   .Portfolio .PortfolioProjects {
     flex-direction: column;

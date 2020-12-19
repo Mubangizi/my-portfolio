@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 5!important;
   height: 100vh;
   display: flex;
   flex-direction: row;
@@ -78,7 +78,11 @@
   height: 190px;
   width: 190px;
   border: 7px solid var(--color-background-light);
-  object-fit: fit !important;
+}
+.UserImage .MuiAvatar-img{
+  object-fit: contain !important;
+  transform: scale(1.4);
+  
 }
 
 .UserImageBtn .UserImageOverlay {
@@ -133,7 +137,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 5;
   background-color: var(--color-primary);
   overflow: hidden;
   width: 0;
@@ -174,7 +178,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 5;
   background-color: rgb(2, 136, 209, 0.2);
   overflow: hidden;
   width: 0;

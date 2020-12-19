@@ -22,3 +22,13 @@ p {
 h1 {
   font-size: 45px;
 }
+
+@media (max-width: 370px){
+  h1 {
+    font-size: 37px;
+  }
+  p {
+    font-size: 15px;
+  }
+  
+}
