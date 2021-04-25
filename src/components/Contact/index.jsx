@@ -1,12 +1,28 @@
 import { Button, TextField } from "@material-ui/core";
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../Layout";
 import CallOutlinedIcon from "@material-ui/icons/CallOutlined";
 import "./Contact.css";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 const Contact = () => {
-  
+  const [values, setValues] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const { name, email, subject, message } = values;
+
+  const handleChange = (name) => (event) => {
+    setValues({ ...values, [name]: event.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setValues({ ...values });
+  };
+
   return (
     <Layout>
       <div className="Contact">
@@ -14,24 +30,33 @@ const Contact = () => {
         <div className="ContactArea">
           <div className="SendMailArea">
             <h2>Get In Touch</h2>
-            <form className="ContactForm">
+            <form className="ContactForm" onSubmit={handleSubmit}>
               <TextField
                 id="outlined-error"
                 label="Enter Your Name"
                 defaultValue=""
                 variant="outlined"
+                name="name"
+                value={name}
+                onChange={handleChange("name")}
               />
               <TextField
                 id="outlined-error"
                 label="Enter Your Email"
                 defaultValue=""
                 variant="outlined"
+                name="email"
+                value={email}
+                onChange={handleChange("email")}
               />
               <TextField
                 id="outlined-error"
                 label="Enter Your Subject"
                 defaultValue=""
                 variant="outlined"
+                name="subject"
+                value={subject}
+                onChange={handleChange("subject")}
               />
               <TextField
                 className="MessageField"
@@ -41,8 +66,11 @@ const Contact = () => {
                 rows={10}
                 defaultValue=""
                 variant="outlined"
+                name="message"
+                value={message}
+                onChange={handleChange("message")}
               />
-              <Button>SEND MAIL</Button>
+              <Button type="submit">SEND MAIL</Button>
             </form>
           </div>
           <div className="OtherContactInfo">
