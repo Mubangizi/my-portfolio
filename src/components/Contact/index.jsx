@@ -6,6 +6,7 @@ import "./Contact.css";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 const Contact = () => {
+  
   return (
     <Layout>
       <div className="Contact">
@@ -51,8 +52,12 @@ const Contact = () => {
               </span>
               <div className="ContactCardInfo">
                 <h3>Phone</h3>
-                <p>+256-705754073</p>
-                <p>+256-770718905</p>
+                <p>
+                  <a href="tel:+256705754073">+256-705754073</a>
+                </p>
+                <p>
+                  <a href="tel:+256770718905">+256-770718905</a>
+                </p>
               </div>
             </div>
             <div className="ContactCard">
@@ -61,14 +66,19 @@ const Contact = () => {
               </span>
               <div className="ContactCardInfo ContactEmail">
                 <h3>Email</h3>
-                <p>mubangizia22@gmail.com</p>
+                <p>
+                  <a href="mailto:mubangizia22@gmail.com">
+                    mubangizia22@gmail.com
+                  </a>
+                </p>
               </div>
             </div>
+            ContactEmail
             <div className="ContactCard">
               <span className="ContactCardIcon">
                 <LocationOnOutlinedIcon />
               </span>
-              <div className="ContactCardInfo">
+              <div className="ContactCardInfo ContactAddress">
                 <h3>Address</h3>
                 <p>Uganda, Kampala</p>
               </div>

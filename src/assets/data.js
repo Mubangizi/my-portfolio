@@ -1,6 +1,13 @@
 export const experiences = [
   {
-    time: "Jun 2020 - Present",
+    time: "Dec 2020 - Present",
+    title: "Software Engineer",
+    company: "Waape",
+    resposibility:
+      " Building Waape system (www.waape.io), platform to help connect job seekers to job creators. I am working on implementation of both frontend and the backend logic",
+  },
+  {
+    time: "Jun 2020 - Jan 2021",
     title: "Fullstack Web Developer",
     company: "Matatu Hub",
     resposibility:
@@ -69,6 +76,12 @@ export const portfolios = [
     image: "cranecloud.png",
     url: "https://staging.cranecloud.io",
     info: "A cloud Platform as a Service provider",
+  },
+  {
+    title: "Waape",
+    image: "waape.png",
+    url: "https://www.waape.io",
+    info: "A platform to help connect job seekers to job creators",
   },
   {
     title: "Mobile Shop",
