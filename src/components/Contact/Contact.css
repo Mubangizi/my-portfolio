@@ -48,6 +48,10 @@
   flex-direction: column;
   gap: 30px 0;
 }
+.OtherContactInfo a{
+  text-decoration: none;
+  color: inherit;
+}
 .ContactArea {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -79,6 +83,7 @@
   cursor: pointer;
   padding-bottom: 40px;
 }
+
 .ContactCard:hover {
   transform: scale(1.03);
   transition: 0.4s;
@@ -98,6 +103,10 @@
   display: inline;
 }
 
-.ContactCard .ContactEmail p:hover {
+.ContactCard  p:hover {
   color: var(--color-blue);
+}
+
+.ContactAddress p:hover {
+  color: var(--color-primary);
 }
