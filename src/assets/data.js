@@ -1,6 +1,13 @@
 export const experiences = [
   {
-    time: "Dec 2020 - Present",
+    time: "Aug 2019 - Present",
+    title: "Fullstack Web Developer",
+    company: "Cranecloud",
+    resposibility:
+      " I work as a fullstack developer, but my specialty is backend and dev-ops using python Flask and Kubernetes for applications management. I am responsible to maintain running applications on the Kubernetes cluster, integrate new features to the Crane cloud API and many more",
+  },
+  {
+    time: "Nov 2020 - July 2021",
     title: "Software Engineer",
     company: "Waape",
     resposibility:
@@ -13,18 +20,12 @@ export const experiences = [
     resposibility:
       " Working on an e-commerce system for electronics called Mobile Shop (mobileshop.ug). Leading a team of 6 to develop and bring the web app to life",
   },
-  {
-    time: "Aug 2019 - Present",
-    title: "Fullstack Web Developer",
-    company: "Cranecloud",
-    resposibility:
-      " I work as a fullstack developer, but my specialty is backend and dev-ops using python Flask and Kubernetes for applications management. I am responsible to maintain running applications on the Kubernetes cluster, integrate new features to the Crane cloud API and many more",
-  },
+  
 ];
 
 export const learning = [
   {
-    time: "2016 - Present",
+    time: "2016 - 2020",
     title: "Makerere University",
     company: "University ",
     resposibility: " Bachelor in Computer Science",
@@ -80,7 +81,7 @@ export const portfolios = [
   {
     title: "Waape",
     image: "waape.png",
-    url: "https://www.waape.io",
+    url: "https://www.waape.ug",
     info: "A platform to help connect job seekers to job creators",
   },
   {
