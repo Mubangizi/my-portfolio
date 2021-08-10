@@ -34,7 +34,6 @@ const Contact = () => {
               <TextField
                 id="outlined-error"
                 label="Enter Your Name"
-                defaultValue=""
                 variant="outlined"
                 name="name"
                 value={name}
@@ -43,7 +42,6 @@ const Contact = () => {
               <TextField
                 id="outlined-error"
                 label="Enter Your Email"
-                defaultValue=""
                 variant="outlined"
                 name="email"
                 value={email}
@@ -52,7 +50,6 @@ const Contact = () => {
               <TextField
                 id="outlined-error"
                 label="Enter Your Subject"
-                defaultValue=""
                 variant="outlined"
                 name="subject"
                 value={subject}
@@ -64,7 +61,6 @@ const Contact = () => {
                 label="Enter Your Message"
                 multiline
                 rows={10}
-                defaultValue=""
                 variant="outlined"
                 name="message"
                 value={message}
