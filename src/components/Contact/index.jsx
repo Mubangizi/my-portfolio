@@ -5,6 +5,7 @@ import CallOutlinedIcon from "@material-ui/icons/CallOutlined";
 import "./Contact.css";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
 import LocationOnOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
+
 const Contact = () => {
   const [values, setValues] = useState({
     name: "",
