@@ -42,7 +42,7 @@ const SideBar = () => {
           </div>
         </div>
         <div className="NavItems">
-          <NavLink to={{ pathname: `/` }} exact={true}>
+          <NavLink to={{ pathname: `/` }} exact>
             Home
           </NavLink>
           <NavLink to={{ pathname: `/about` }}>About</NavLink>

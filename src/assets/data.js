@@ -20,7 +20,7 @@ export const experiences = [
     resposibility:
       " Working on an e-commerce system for electronics called Mobile Shop (mobileshop.ug). Leading a team of 6 to develop and bring the web app to life",
   },
-  
+
 ];
 
 export const learning = [
