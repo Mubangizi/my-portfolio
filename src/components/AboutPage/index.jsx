@@ -29,16 +29,12 @@ const AboutPage = () => {
                 <td>: Mubangizi Allan</td>
               </tr>
               <tr>
-                <td className="AboutTableLable">Age</td>
-                <td>: 24</td>
-              </tr>
-              <tr>
                 <td className="AboutTableLable">Nationality</td>
                 <td>: Ugandan</td>
               </tr>
               <tr>
                 <td className="AboutTableLable">Languages</td>
-                <td>: English, Runyankole, Luganda</td>
+                <td>: English</td>
               </tr>
               <tr>
                 <td className="AboutTableLable">Address</td>
