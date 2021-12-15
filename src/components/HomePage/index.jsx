@@ -1,10 +1,10 @@
 import React from "react";
 import "./Home.css";
+import { IconButton } from "@material-ui/core";
 import { HomeLayout } from "../Layout";
 import GitLightIcon from "../../assets/icons/github_light.svg";
 import LinkedInLightIcon from "../../assets/icons/linkedin.svg";
 import TwitterLightIcon from "../../assets/icons/twitter.svg";
-import { IconButton } from "@material-ui/core";
 
 function Home() {
   return (
