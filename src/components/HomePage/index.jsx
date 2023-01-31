@@ -13,9 +13,16 @@ function Home() {
         <div className="HomeMainContent">
           <h1>Hi, I am Mubangizi Allan</h1>
           <p>
-            I am a fullstack web developer. I can provide clean code and pixel
-            perfect design. I also make websites interactive and write organised
-            REST APIs.
+            As a Full-stack Developer, I bring a wealth of experience and
+            expertise to any project.
+            <br />I am committed to delivering exceptional results and
+            consistently meet high standards. My deep understanding of the
+            software development lifecycle and broad range of technical skills
+            allow me to tackle any challenge. <br /><br/>I am goal-oriented,
+            dependable, and able to adapt to changing requirements, making me a
+            valuable asset to any team. With a proven track record in developing
+            robust and innovative software solutions, I am ready to take on any
+            project and deliver outstanding results.
           </p>
           <div className="MySocial">
             <IconButton>

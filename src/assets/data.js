@@ -3,24 +3,50 @@ export const experiences = [
     time: "Aug 2019 - Present",
     title: "Fullstack Web Developer",
     company: "Cranecloud",
-    resposibility:
-      " I work as a fullstack developer, but my specialty is backend and dev-ops using python Flask and Kubernetes for applications management. I am responsible to maintain running applications on the Kubernetes cluster, integrate new features to the Crane cloud API and many more",
+    resposibility: `I work as a fullstack developer, 
+      I developed a backend API using Python and Flask, integrated a React.js client, 
+      monitored user application resources with Prometheus and PrometheusDB, 
+      collected and displayed user application logs, automated containerization of various frameworks, 
+      developed user analytics and integrated a billing and payment system and wrote automated tests`,
+  },
+  {
+    time: "Aug 2021 - Dec 2022",
+    title: "Fullstack Developer",
+    company: "Ziramba",
+    resposibility: `I created a robust e-commerce platform using React for the frontend interface and 
+        Django for the backend REST API, integrated Flutter wave for billing and payment, 
+        increased test coverage to 80% with automated tests, integrated Firebase Firestore, 
+        and managed the project with Jira and utilized Docker for CI/CD.`,
+  },
+  {
+    time: "June 2022 - Dec 2022",
+    title: "Frontend Developer (Freelancer)",
+    company: "Term Payments",
+    resposibility: ` I developed the front-end user interface for TermPayments, 
+    an in-person payment solution for online purchases at local stores, using React Native and 
+    JavaScript for both iOS and Android mobile applications. I utilized React Native debugging tools 
+    and implemented features such as a QR scanner, push notifications, and Google Maps integration, 
+    and collaborated with designers for informed UI/UX design decisions and mockup creation.
+        `,
   },
   {
     time: "Nov 2020 - July 2021",
     title: "Software Engineer",
     company: "Waape",
-    resposibility:
-      " Building Waape system (www.waape.io), platform to help connect job seekers to job creators. I am working on implementation of both frontend and the backend logic",
+    resposibility: `Building Waape system (www.waape.io), platform to help connect job seekers to job creators. 
+      I took part in building the Freelancer platform from scratch in 6 months, 
+      including the freelancing module with account creation, registration, and user profile display using Bubble. 
+      I also integrated enterprise systems such as geolocation data and the Twilio API for user notifications through email.`,
   },
   {
     time: "Jun 2020 - Jan 2021",
     title: "Fullstack Web Developer",
     company: "Matatu Hub",
-    resposibility:
-      " Working on an e-commerce system for electronics called Mobile Shop (mobileshop.ug). Leading a team of 6 to develop and bring the web app to life",
+    resposibility: `Working on an e-commerce system for electronics called Mobile Shop (mobileshop.ug). 
+      I designed user wireframes using Figma, developed the frontend web client using React.js and JavaScript, 
+      and mentored a team of junior developers. I also developed a backend REST API using Python Flask, 
+      hosted it on Heroku with a Postgres database, and utilized Firebase Firestore for file hosting.`,
   },
-
 ];
 
 export const learning = [
@@ -28,7 +54,7 @@ export const learning = [
     time: "2016 - 2020",
     title: "Makerere University",
     company: "University ",
-    resposibility: " Bachelor in Computer Science",
+    resposibility: " Bachelor of Science in Computer Science",
   },
   {
     time: "Jan 2014 - Dec 2015",
@@ -55,7 +81,7 @@ export const skills = [
   },
   {
     name: "Javascript",
-    percentage: 75,
+    percentage: 89,
   },
   {
     name: "Python",
@@ -63,7 +89,15 @@ export const skills = [
   },
   {
     name: "Reactjs",
+    percentage: 89,
+  },
+  {
+    name: "Docker",
     percentage: 80,
+  },
+  {
+    name: "Kubernetes",
+    percentage: 70,
   },
   {
     name: "Nextjs",
@@ -75,8 +109,14 @@ export const portfolios = [
   {
     title: "Crane cloud",
     image: "cranecloud.png",
-    url: "https://staging.cranecloud.io",
+    url: "https://cranecloud.io",
     info: "A cloud Platform as a Service provider",
+  },
+  {
+    title: "Ziramba",
+    image: "ziramba.png",
+    url: "https://ziramba.com",
+    info: "An ecommerce platform for construction materials ",
   },
   {
     title: "Waape",
