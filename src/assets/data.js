@@ -18,6 +18,18 @@ export const experiences = [
         increased test coverage to 80% with automated tests, integrated Firebase Firestore, 
         and managed the project with Jira and utilized Docker for CI/CD.`,
   },
+
+  {
+    time: "Aug 2022 - Nov 2022",
+    title: "Frontend Developer (Freelancer)",
+    company: "Mkoba",
+    resposibility: ` I developed a comprehensive React.js admin dashboard for the fintech platform of Mkoba, 
+    providing central control through improved scalability and maintainability with React.js hooks and context. 
+    I implemented features like real-time data visualization, API integrations, and advanced form handling, 
+    and worked with the backend team to design a robust RESTful API. 
+    I also collaborated with the UX team to design an intuitive and user-friendly interface for all stakeholders.
+        `,
+  },
   {
     time: "June 2022 - Dec 2022",
     title: "Frontend Developer (Freelancer)",
