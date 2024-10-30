@@ -13,16 +13,18 @@ function Home() {
         <div className="HomeMainContent">
           <h1>Hi, I am Mubangizi Allan</h1>
           <p>
-            As a Full-stack Developer, I bring a wealth of experience and
-            expertise to any project.
-            <br />I am committed to delivering exceptional results and
-            consistently meet high standards. My deep understanding of the
-            software development lifecycle and broad range of technical skills
-            allow me to tackle any challenge. <br /><br/>I am goal-oriented,
-            dependable, and able to adapt to changing requirements, making me a
-            valuable asset to any team. With a proven track record in developing
-            robust and innovative software solutions, I am ready to take on any
-            project and deliver outstanding results.
+            As a seasoned Full-Stack Developer, I bring extensive expertise and
+            a strong commitment to delivering high-quality solutions. My
+            comprehensive knowledge of the software development lifecycle,
+            coupled with a versatile skill set, allows me to address complex
+            challenges effectively. <br />
+            <br />I am Goal-driven, reliable, and adaptable, I consistently meet
+            demanding standards and thrive in dynamic work environments.
+            <br />
+            <br />
+            My proven track record of creating innovative, robust software
+            highlights my value as a team member, ready to take on diverse
+            projects and consistently exceed expectations.
           </p>
           <div className="MySocial">
             <IconButton>
@@ -45,7 +47,7 @@ function Home() {
             </IconButton>
             <IconButton>
               <a
-                href="https://twitter.com/mubangiziallan"
+                href="https://twitter.com/"
                 rel="noopener noreferrer"
                 target="_blank"
               >

@@ -1,13 +1,34 @@
 export const experiences = [
   {
-    time: "Aug 2019 - Present",
-    title: "Fullstack Web Developer",
+    time: "Oct 2023 - Present",
+    title: "Software Engineer",
+    company: "YOYA Technologies Limited",
+    resposibility: `I work as a fullstack developer, 
+      Developed and integrated arrears penalty module into IRAS revenue system, ensuring compatibility with existing infrastructure
+      Developed and deployed a streamlined payment workflow for presumptive tax integration in IRAS, enhancing overall processing efficiency.
+      Engineered MVP for YOYA loans, leveraging Python Django and Reactjs for frontend processes.
+      Implemented efficient file management algorithms in the IRAS mobile app to optimize user interaction `,
+  },
+  {
+    time: "Aug 2019 - Dec 2023",
+    title: "Software Engineer",
     company: "Cranecloud",
     resposibility: `I work as a fullstack developer, 
       I developed a backend API using Python and Flask, integrated a React.js client, 
       monitored user application resources with Prometheus and PrometheusDB, 
       collected and displayed user application logs, automated containerization of various frameworks, 
       developed user analytics and integrated a billing and payment system and wrote automated tests`,
+  },
+
+  {
+    time: "Mar 2023 - Aug 2023",
+    title: "Software Engineer",
+    company: "Harmonic AI",
+    resposibility: `I work as a fullstack developer, 
+      Implemented robust sorting options, including "Sort by Relevance," using TypeScript and React.js on Harmonic's console.
+      Enhanced data accuracy in Harmonic's Chrome Extension, resulting in improved user experience and satisfaction.
+      Incorporated departmental headcount data into company pages, providing comprehensive and visually informative headcount graphs.
+      Spearheaded pipeline transformation by migrating multiple processes from Cloud Tasks to Pub/Sub messaging, improving efficiency and cost-effectiveness.`,
   },
   {
     time: "Aug 2021 - Dec 2022",
@@ -31,7 +52,7 @@ export const experiences = [
         `,
   },
   {
-    time: "June 2022 - Dec 2022",
+    time: "Jun 2022 - Dec 2022",
     title: "Frontend Developer (Freelancer)",
     company: "Term Payments",
     resposibility: ` I developed the front-end user interface for TermPayments, 
@@ -68,25 +89,9 @@ export const learning = [
     company: "University ",
     resposibility: " Bachelor of Science in Computer Science",
   },
-  {
-    time: "Jan 2014 - Dec 2015",
-    title: "Ntare School",
-    company: "Secondary Education",
-    resposibility: "A - level",
-  },
-  {
-    time: "Jan 2010 - Dec 2013",
-    title: "Ntare School",
-    company: "Secondary Education",
-    resposibility: "O - level",
-  },
 ];
 
 export const skills = [
-  {
-    name: "HTML5",
-    percentage: 85,
-  },
   {
     name: "CSS3",
     percentage: 80,
@@ -104,12 +109,24 @@ export const skills = [
     percentage: 89,
   },
   {
+    name: "Flask",
+    percentage: 80,
+  },
+  {
+    name: "React Native",
+    percentage: 70,
+  },
+  {
+    name: "Django",
+    percentage: 80,
+  },
+  {
     name: "Docker",
     percentage: 80,
   },
   {
     name: "Kubernetes",
-    percentage: 70,
+    percentage: 80,
   },
   {
     name: "Nextjs",
@@ -118,6 +135,24 @@ export const skills = [
 ];
 
 export const portfolios = [
+  {
+    title: "IRAS",
+    image: "iras.png",
+    url: "https://iras.go.ug/",
+    info: "Uganda’s digital platform for managing tax processes",
+  },
+  {
+    title: "Nema eServices",
+    image: "nema.png",
+    url: "https://eservices.nema.go.ug",
+    info: "A cloud Platform as a Service provider",
+  },
+  {
+    title: "Harmonic AI",
+    image: "harmonic.png",
+    url: "https://harmonic.ai",
+    info: "Provides a comprehensive database for discovering startups and emerging companies.",
+  },
   {
     title: "Crane cloud",
     image: "cranecloud.png",

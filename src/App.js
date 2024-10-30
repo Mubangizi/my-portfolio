@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutPage from "./components/AboutPage";
 import HomePage from "./components/HomePage";
 import Portfolio from "./components/Portfolio";
@@ -8,14 +8,14 @@ import Contact from "./components/Contact";
 
 const App = () => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/about" component={AboutPage} />
-      <Route exact path="/portfolio" component={Portfolio} />
-      <Route exact path="/resume" component={Resume} />
-      <Route exact path="/contact" component={Contact} />
-    </Switch>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/resume" element={<Resume />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
   </BrowserRouter>
-  );
+);
 
 export default App;
