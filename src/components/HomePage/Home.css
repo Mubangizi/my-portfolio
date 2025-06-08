@@ -1,21 +1,105 @@
-.HomeMainContent {
-  min-height: 80vh;
+.Container {
+  min-height: 85vh;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-content: center;
+  padding: 2rem;
+}
+
+.HomeMainContent {
+  max-width: 1200px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.HomeMainContent.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-section {
   text-align: center;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 3rem;
 }
 
-.HomeMainContent h1 {
-  margin: 0;
+.greeting {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.highlight {
   color: white;
+  position: relative;
+  display: inline-block;
 }
 
-p {
-  line-height: 30px;
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: white;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: var(--color-text-light);
+  margin: 0 auto;
+}
+
+.content-section {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  text-transform: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: #ccd4ee;
+  border: 1px solid var(--color-primary);
+}
+.cta-button-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .MySocial {
@@ -44,4 +128,50 @@ p {
 
 .MySocial img:hover {
   transform: scale(1.4);
+}
+
+@media (max-width: 768px) {
+  .Container {
+    padding: 1rem;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .bio {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .MySocial {
+    gap: 1rem;
+  }
 }

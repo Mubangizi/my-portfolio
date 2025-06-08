@@ -23,6 +23,10 @@ h1 {
   font-size: 45px;
 }
 
+button {
+  outline: none;
+}
+
 @media (max-width: 370px){
   h1 {
     font-size: 37px;
