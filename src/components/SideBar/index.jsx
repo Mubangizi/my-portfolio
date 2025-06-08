@@ -1,31 +1,54 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import { Avatar, IconButton } from "@material-ui/core";
+import React, { useState } from "react";
+import { Avatar, IconButton, Tooltip } from "@material-ui/core";
 import picture from "../../assets/images/me.jpg";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
 import "./SideBar.css";
 import CloseOutlinedIcon from "@material-ui/icons/CloseOutlined";
-
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import TwitterIcon from "@material-ui/icons/Twitter";
 const SideBar = () => {
-  const [open, setOpen] = React.useState(false);
-  const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const [currentYear] = useState(new Date().getFullYear());
 
   const handleDrawer = () => {
-    if (open === true) {
+    setOpen(!open);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
       setOpen(false);
-    } else {
-      setOpen(true);
     }
   };
 
-  const sendToHome = () => {
-    navigate("/");
-  };
+  const socialLinks = [
+    {
+      icon: <GitHubIcon />,
+      url: "https://github.com/mubangizi",
+      label: "GitHub",
+    },
+    {
+      icon: <LinkedInIcon />,
+      url: "https://linkedin.com/in/your-profile",
+      label: "LinkedIn",
+    },
+    {
+      icon: <TwitterIcon />,
+      url: "https://twitter.com/your-handle",
+      label: "Twitter",
+    },
+  ];
+
   return (
     <div className="SideBar">
       <div className={`SideBarContent Side-${open}`}>
         <div className="UserImage">
-          <IconButton className="UserImageBtn" onClick={sendToHome}>
+          <IconButton
+            className="UserImageBtn"
+            onClick={() => scrollToSection("home")}
+          >
             <Avatar src={picture} />
             <div className="UserImageOverlay">
               <p className="UserImageText">Mubangizi Allan</p>
@@ -42,16 +65,32 @@ const SideBar = () => {
           </div>
         </div>
         <div className="NavItems">
-          <NavLink to={{ pathname: `/` }} exact>
-            Home
-          </NavLink>
-          <NavLink to={{ pathname: `/about` }}>About</NavLink>
-          <NavLink to={{ pathname: `/resume` }}>Resume</NavLink>
-          <NavLink to={{ pathname: `/portfolio` }}>Portfolios</NavLink>
-          <NavLink to={{ pathname: `/contact` }}>Contact</NavLink>
+          <button onClick={() => scrollToSection("home")}>Home</button>
+          <button onClick={() => scrollToSection("about")}>About</button>
+          <button onClick={() => scrollToSection("resume")}>Resume</button>
+          <button onClick={() => scrollToSection("portfolio")}>
+            Portfolios
+          </button>
+          <button onClick={() => scrollToSection("contact")}>Contact</button>
         </div>
-        <div className="RemarksSection">
-          <p>© 2020 Mubangizi Allan</p>
+        <div>
+          <div className="SocialLinks">
+            {socialLinks.map((link) => (
+              <Tooltip key={link.label} title={link.label} placement="top">
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="SocialLink"
+                >
+                  {link.icon}
+                </a>
+              </Tooltip>
+            ))}
+          </div>
+          <div className="RemarksSection">
+            <p>© {currentYear} Mubangizi Allan</p>
+          </div>
         </div>
       </div>
       <div className="SideControllerBtn">

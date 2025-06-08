@@ -1,12 +1,12 @@
 export const experiences = [
   {
     time: "Oct 2023 - Present",
-    title: "Software Engineer",
+    title: "Senior Software Engineer",
     company: "YOYA Technologies Limited",
     resposibility: `I work as a fullstack developer, 
       Developed and integrated arrears penalty module into IRAS revenue system, ensuring compatibility with existing infrastructure
       Developed and deployed a streamlined payment workflow for presumptive tax integration in IRAS, enhancing overall processing efficiency.
-      Engineered MVP for YOYA loans, leveraging Python Django and Reactjs for frontend processes.
+      Engineered MVP for Tayari loans, leveraging Python Django and Reactjs for frontend processes.
       Implemented efficient file management algorithms in the IRAS mobile app to optimize user interaction `,
   },
   {
@@ -93,12 +93,8 @@ export const learning = [
 
 export const skills = [
   {
-    name: "CSS3",
-    percentage: 80,
-  },
-  {
     name: "Javascript",
-    percentage: 89,
+    percentage: 91,
   },
   {
     name: "Python",
@@ -122,7 +118,7 @@ export const skills = [
   },
   {
     name: "Docker",
-    percentage: 80,
+    percentage: 85,
   },
   {
     name: "Kubernetes",
@@ -132,6 +128,10 @@ export const skills = [
     name: "Nextjs",
     percentage: 70,
   },
+  {
+    name: "SQL",
+    percentage: 60,
+  },
 ];
 
 export const portfolios = [
@@ -139,13 +139,19 @@ export const portfolios = [
     title: "IRAS",
     image: "iras.png",
     url: "https://iras.go.ug/",
-    info: "Uganda’s digital platform for managing tax processes",
+    info: "Uganda’s digital platform for managing tax collectionprocesses",
   },
   {
     title: "Nema eServices",
     image: "nema.png",
     url: "https://eservices.nema.go.ug",
-    info: "A cloud Platform as a Service provider",
+    info: "SAAS for NEMA to manage their operations",
+  },
+  {
+    title: "Tayari",
+    image: "tayari.png",
+    url: "https://tayari.yoyaloans.net/",
+    info: "Tayari is a platform for managing and tracking the bikes for loans",
   },
   {
     title: "Harmonic AI",

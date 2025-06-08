@@ -1,6 +1,5 @@
 import { Button, TextField } from "@material-ui/core";
 import React, { useState } from "react";
-import Layout from "../Layout";
 import CallOutlinedIcon from "@material-ui/icons/CallOutlined";
 import "./Contact.css";
 import EmailOutlinedIcon from "@material-ui/icons/EmailOutlined";
@@ -112,10 +111,4 @@ export const Contact = () => {
   );
 };
 
-const ContactPage = () => (
-  <Layout>
-    <Contact />
-  </Layout>
-);
-
-export default ContactPage;
+export default Contact;

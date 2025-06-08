@@ -157,7 +157,7 @@
 
   margin: 5px;
 }
-.NavItems a {
+.NavItems button {
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -166,13 +166,16 @@
   padding: 13px 0;
   outline: none;
   font-size: 15px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 .active {
   background-color: var(--color-blue);
   color: white !important;
 }
 
-.NavItems a::before {
+.NavItems button::before {
   position: absolute;
   content: "";
   bottom: 0;
@@ -186,7 +189,7 @@
   transition: 0.5s ease;
 }
 
-.NavItems a:hover::before {
+.NavItems button:hover::before {
   width: 100%;
 }
 
@@ -203,4 +206,23 @@
 .RemarksSection p:hover {
   color: white;
   transition: 0.2s;
+}
+
+
+.SocialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.SocialLink {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.SocialLink:hover {
+  color: var(--color-primary);
+  transition: all 0.3s ease;
+  scale: 1.3;
 }
