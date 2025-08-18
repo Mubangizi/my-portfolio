@@ -11,13 +11,13 @@ export const experiences = [
   },
   {
     time: "Aug 2019 - Dec 2023",
-    title: "Software Engineer",
+    title: "Technical Lead",
     company: "Cranecloud",
-    resposibility: `I work as a fullstack developer, 
-      I developed a backend API using Python and Flask, integrated a React.js client, 
-      monitored user application resources with Prometheus and PrometheusDB, 
-      collected and displayed user application logs, automated containerization of various frameworks, 
-      developed user analytics and integrated a billing and payment system and wrote automated tests`,
+    resposibility: `Built a scalable Flask/Kubernetes API for application deployments and database management (MySQL, PostgreSQL). 
+    Architected a Kubernetes-based microservices platform (Flask) enabling independent deployments, horizontal scaling, and fault isolation,
+    Led platform improvements including real-time logging (cut debugging time by 70%), 
+    standardized DevOps automation for React/Django/Flask (reduced deployment time by 67%), 
+    an MLOps lifecycle with Jupyter Notebooks/MLflow/Seldon Core, and a modernized UI using React/TypeScript/Vite/Mantine (increased engagement and task efficiency by 35%).`,
   },
 
   {
