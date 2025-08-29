@@ -10,7 +10,7 @@ export const experiences = [
       Implemented efficient file management algorithms in the IRAS mobile app to optimize user interaction `,
   },
   {
-    time: "Aug 2019 - Dec 2023",
+    time: "Aug 2019 - Dec 2024",
     title: "Technical Lead",
     company: "Cranecloud",
     resposibility: `Built a scalable Flask/Kubernetes API for application deployments and database management (MySQL, PostgreSQL). 
