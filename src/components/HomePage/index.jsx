@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { IconButton, Typography, Button } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { HomeLayout } from "../Layout";
-import GitLightIcon from "../../assets/icons/github_light.svg";
-import LinkedInLightIcon from "../../assets/icons/linkedin.svg";
-import TwitterLightIcon from "../../assets/icons/twitter.svg";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitter,
+  FaCode,
+  FaRocket,
+} from "react-icons/fa";
+import {
+  IoBriefcaseSharp,
+  IoMailSharp,
+  IoSparklesSharp,
+} from "react-icons/io5";
 import { Portfolio } from "../Portfolio";
 import { Contact } from "../Contact";
 import { Resume } from "../Resume";
 import "./Home.css";
-
-const SocialButton = ({ href, icon, label }) => (
-  <IconButton
-    className="social-button"
-    aria-label={label}
-    component="a"
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <img src={icon} alt={label} />
-  </IconButton>
-);
 
 export const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -36,20 +32,50 @@ export const Home = () => {
     }
   };
 
+  const socialLinks = [
+    {
+      icon: <FaGithub />,
+      url: "https://github.com/mubangizi",
+      label: "GitHub",
+    },
+    {
+      icon: <FaLinkedinIn />,
+      url: "https://www.linkedin.com/in/mubangizi-allan/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <FaTwitter />,
+      url: "https://twitter.com/",
+      label: "Twitter",
+    },
+  ];
+
   return (
     <div className="Container">
       <div className={`HomeMainContent ${isVisible ? "fade-in" : ""}`}>
         <div className="hero-section">
+          {/* <div className="greeting-badge">
+            <IoSparklesSharp className="sparkle-icon" />
+            <span>Full-Stack Developer</span>
+          </div> */}
           <Typography variant="h1" className="greeting">
             Hi, I'm <span className="highlight">Mubangizi Allan</span>
           </Typography>
           <Typography variant="h2" className="title">
             Full-Stack Software Engineer
           </Typography>
-          <Typography variant="body1" className="description">
-            Building scalable, high-performance web applications with modern
-            technologies and clean architecture
-          </Typography>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Typography variant="body1" className="description">
+              Building scalable, high-performance web applications with modern
+              technologies and clean architecture
+            </Typography>
+          </div>
         </div>
 
         <div className="content-section">
@@ -70,47 +96,34 @@ export const Home = () => {
           <div className="cta-buttons">
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="cta-button"
+              className="cta-button cta-primary"
             >
-              View My Work
+              <IoBriefcaseSharp />
+              <span>View My Work</span>
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="cta-button cta-button-secondary"
+              className="cta-button cta-secondary"
             >
-              Get in Touch
+              <IoMailSharp />
+              <span>Get in Touch</span>
             </button>
           </div>
         </div>
 
         <div className="MySocial">
-          <IconButton>
+          {socialLinks.map((link) => (
             <a
-              href="https://github.com/mubangizi"
-              rel="noopener noreferrer"
+              key={link.label}
+              href={link.url}
               target="_blank"
-            >
-              <img src={GitLightIcon} alt="" />
-            </a>
-          </IconButton>
-          <IconButton>
-            <a
-              href="https://www.linkedin.com/in/mubangizi-allan/"
               rel="noopener noreferrer"
-              target="_blank"
+              className="social-link"
+              aria-label={link.label}
             >
-              <img src={LinkedInLightIcon} alt="" />
+              {link.icon}
             </a>
-          </IconButton>
-          <IconButton>
-            <a
-              href="https://twitter.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img src={TwitterLightIcon} alt="" />
-            </a>
-          </IconButton>
+          ))}
         </div>
       </div>
     </div>
