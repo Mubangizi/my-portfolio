@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Avatar, IconButton, Tooltip } from "@material-ui/core";
 import picture from "../../assets/images/me.jpg";
-import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
+import { FiMenu, FiX } from "react-icons/fi";
+import {
+  IoHomeSharp,
+  IoPersonSharp,
+  IoDocumentTextSharp,
+  IoBriefcaseSharp,
+  IoMailSharp,
+  IoSparklesSharp,
+} from "react-icons/io5";
+import { FaGithub, FaLinkedinIn, FaTwitter, FaRocket } from "react-icons/fa";
 import "./SideBar.css";
-import CloseOutlinedIcon from "@material-ui/icons/CloseOutlined";
-import GitHubIcon from "@material-ui/icons/GitHub";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import TwitterIcon from "@material-ui/icons/Twitter";
 const SideBar = () => {
   const [open, setOpen] = useState(false);
   const [currentYear] = useState(new Date().getFullYear());
@@ -23,20 +28,28 @@ const SideBar = () => {
     }
   };
 
+  const navItems = [
+    { id: "home", label: "Home", icon: <IoHomeSharp /> },
+    { id: "about", label: "About", icon: <IoPersonSharp /> },
+    { id: "resume", label: "Resume", icon: <IoDocumentTextSharp /> },
+    { id: "portfolio", label: "Portfolio", icon: <IoBriefcaseSharp /> },
+    { id: "contact", label: "Contact", icon: <IoMailSharp /> },
+  ];
+
   const socialLinks = [
     {
-      icon: <GitHubIcon />,
+      icon: <FaGithub />,
       url: "https://github.com/mubangizi",
       label: "GitHub",
     },
     {
-      icon: <LinkedInIcon />,
-      url: "https://linkedin.com/in/your-profile",
+      icon: <FaLinkedinIn />,
+      url: "https://www.linkedin.com/in/mubangizi-allan/",
       label: "LinkedIn",
     },
     {
-      icon: <TwitterIcon />,
-      url: "https://twitter.com/your-handle",
+      icon: <FaTwitter />,
+      url: "https://twitter.com/",
       label: "Twitter",
     },
   ];
@@ -49,31 +62,38 @@ const SideBar = () => {
             className="UserImageBtn"
             onClick={() => scrollToSection("home")}
           >
-            <Avatar src={picture} />
+            <Avatar src={picture} className="UserAvatar" />
             <div className="UserImageOverlay">
               <p className="UserImageText">Mubangizi Allan</p>
             </div>
           </IconButton>
-          <div className="UserGitProfile ItemUnderline">
-            <a
-              href="https://github.com/mubangizi"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              github.com/mubangizi
-            </a>
+          <div>
+            <h3 className="UserName">Mubangizi Allan</h3>
+            <p className="UserTitle">Full-Stack Software Engineer</p>
+            <div className="UserGitProfile ItemUnderline">
+              <a
+                href="https://github.com/mubangizi"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                github.com/mubangizi
+              </a>
+            </div>
           </div>
         </div>
         <div className="NavItems">
-          <button onClick={() => scrollToSection("home")}>Home</button>
-          <button onClick={() => scrollToSection("about")}>About</button>
-          <button onClick={() => scrollToSection("resume")}>Resume</button>
-          <button onClick={() => scrollToSection("portfolio")}>
-            Portfolios
-          </button>
-          <button onClick={() => scrollToSection("contact")}>Contact</button>
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="NavItem"
+            >
+              <span className="NavIcon">{item.icon}</span>
+              <span className="NavLabel">{item.label}</span>
+            </button>
+          ))}
         </div>
-        <div>
+        <div className="SideBarFooter">
           <div className="SocialLinks">
             {socialLinks.map((link) => (
               <Tooltip key={link.label} title={link.label} placement="top">
@@ -82,6 +102,7 @@ const SideBar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="SocialLink"
+                  aria-label={link.label}
                 >
                   {link.icon}
                 </a>
@@ -89,19 +110,19 @@ const SideBar = () => {
             ))}
           </div>
           <div className="RemarksSection">
-            <p>© {currentYear} Mubangizi Allan</p>
+            <p>© {currentYear}</p>
+            <p className="RemarksName">Mubangizi Allan</p>
           </div>
         </div>
       </div>
       <div className="SideControllerBtn">
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
+        <button
           onClick={handleDrawer}
-          edge="start"
+          className="MenuToggle"
+          aria-label="Toggle menu"
         >
-          {!open ? <MenuOutlinedIcon /> : <CloseOutlinedIcon />}
-        </IconButton>
+          {!open ? <FiMenu /> : <FiX />}
+        </button>
       </div>
     </div>
   );
