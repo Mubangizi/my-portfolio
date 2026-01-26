@@ -97,44 +97,73 @@
 .AboutServices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  gap: 24px;
+  margin-top: 50px;
 }
 
 .ServiceCard {
-  border-radius: 10px;
-  padding: 30px;
+  position: relative;
+  border-radius: 8px;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
-  border: 1px solid var(--color-background-light);
+  overflow: hidden;
 }
 
 .ServiceCard:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-primary);
-  background-color: var(--color-background-light);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .ServiceIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
   margin-bottom: 20px;
+  background: rgba(100, 100, 100, 0.15);
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.ServiceIcon .MuiSvgIcon-root {
-  font-size: 40px;
-  color: var(--color-primary);
+.ServiceCard:hover .ServiceIcon {
+  background: rgba(120, 120, 120, 0.2);
+  transform: translateY(-2px);
+}
+
+.ServiceIcon svg {
+  font-size: 24px;
+  color: rgba(200, 200, 200, 0.9);
 }
 
 .ServiceTitle {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--color-text);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.ServiceCard:hover .ServiceTitle {
+  color: rgba(220, 220, 220, 1);
 }
 
 .ServiceInfo {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.65;
   color: var(--color-text-secondary);
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .AboutServices {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -142,7 +171,29 @@
     grid-template-columns: 1fr;
   }
   
+  .AboutServices {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
   .ServiceCard {
-    padding: 20px;
+    padding: 24px 20px;
+  }
+  
+  .ServiceIcon {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .ServiceIcon svg {
+    font-size: 20px;
+  }
+  
+  .ServiceTitle {
+    font-size: 1.15rem;
+  }
+  
+  .ServiceInfo {
+    font-size: 0.9rem;
   }
 }

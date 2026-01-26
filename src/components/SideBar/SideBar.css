@@ -1,130 +1,305 @@
+/* Entrance animations */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .SideBar {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5!important;
+  z-index: 1000;
   height: 100vh;
   display: flex;
   flex-direction: row;
-  gap: 0;
+  animation: fadeIn 0.5s ease;
 }
 
 .SideBarContent {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-content: center;
-  background: var(--color-background);
+  width: 280px;
+  background: var(--color-background-dark);
+  backdrop-filter: blur(10px);
   border-right: 1px solid var(--color-background-light);
   height: 100vh;
+  box-shadow: 2px 0 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .SideControllerBtn {
   visibility: hidden;
-  z-index: 999;
-  margin-top: 10px;
+  z-index: 1001;
+  margin-top: 16px;
 }
-.SideControllerBtn .MuiIconButton-edgeStart {
-  margin-left: -2px;
-}
-.SideControllerBtn > .MuiButtonBase-root {
-  padding: 10px;
-  background-color: var(--color-background);
-  border-radius: 0;
+
+.MenuToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background-color: var(--color-background-dark);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--color-background-light);
   border-left: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--color-primary);
+  font-size: 20px;
 }
-.SideControllerBtn > .MuiButtonBase-root:hover {
-  background-color: var(--color-background);
+
+.MenuToggle:hover {
+  background-color: var(--color-background-light);
+  color: var(--color-blue);
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.4);
+  transform: scale(1.05);
+}
+
+.MenuToggle:active {
+  transform: scale(0.95);
+}
+
+/* Scrollbar styling for sidebar */
+.SideBarContent {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.SideBarContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.SideBarContent::-webkit-scrollbar-track {
+  background: var(--color-background-dark);
+}
+
+.SideBarContent::-webkit-scrollbar-thumb {
+  background: var(--color-background-light);
+  border-radius: 3px;
+}
+
+.SideBarContent::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blue);
 }
 
 @media (max-width: 1275px) {
   .SideBarContent {
-    height: 100vh !important;
-    width: 0;
-    overflow-x: hidden;
-    transition: 0.8s;
+    position: fixed;
+    width: 280px;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
   }
 
   .SideControllerBtn {
     visibility: visible;
   }
+  
   .Side-false {
-    width: 0 !important;
-    display: none;
+    transform: translateX(-100%);
   }
+  
   .Side-true {
-    width: 100% !important;
+    transform: translateX(0);
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media (max-width: 480px) {
+  .SideBarContent {
+    width: 85%;
+  }
+  
+  .UserImage {
+    padding: 24px 20px;
+  }
+  
+  .UserImage .MuiAvatar-root {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .NavItem {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .NavIcon {
+    font-size: 16px;
+  }
+  
+  .SocialLink {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
   }
 }
 
 .UserImage {
-  padding: 10px 20px;
-  border-bottom: 1px solid var(--color-background-light) !important;
-  margin: 0;
+  padding: 32px 24px;
+  border-bottom: 1px solid var(--color-background-light);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 10px;
+  gap: 12px;
+  animation: fadeIn 0.6s ease;
 }
+
 .UserImage .UserImageBtn {
   position: relative;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.UserImage .UserImageBtn:hover {
+  transform: scale(1.02);
 }
 
 .UserImage .MuiAvatar-root {
-  width: 50%;
-  display: block;
-  height: 190px;
-  width: 190px;
-  border: 7px solid var(--color-background-light);
+  width: 120px;
+  height: 120px;
+  border: 3px solid var(--color-background-light);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.15);
 }
-.UserImage .MuiAvatar-img{
+
+.UserImage .MuiAvatar-img {
   object-fit: contain !important;
   transform: scale(1.4);
-  
+}
+
+.UserImage .UserImageBtn:hover .MuiAvatar-root {
+  border-color: var(--color-blue);
+  box-shadow: 0 6px 24px rgba(0, 123, 255, 0.3);
 }
 
 .UserImageBtn .UserImageOverlay {
-  color: white;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-background-dark);
-  overflow: hidden;
-  width: 100%;
-  height: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 123, 255, 0.7));
+  backdrop-filter: blur(4px);
   border-radius: 50%;
-  transition: 0.5s ease;
-  background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .UserImage:hover .UserImageOverlay {
-  height: 100%;
-}
-
-.UserImageOverlay p {
-  text-transform: capitalize;
-  letter-spacing: 1px;
+  opacity: 1;
 }
 
 .UserImageText {
   color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.UserName {
+  margin: 8px 0 4px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 8px; */
+}
+
+.UserBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, var(--color-blue), #00c6ff);
+  border-radius: 50%;
+  color: white;
+  font-size: 12px;
+  animation: sparkle 2s ease-in-out infinite;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.UserTitle {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  opacity: 0.7;
+  text-align: center;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.TitleIcon {
+  font-size: 14px;
+  color: var(--color-blue);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 .UserGitProfile a {
   text-decoration: none;
-  color: var(--col);
-  font-size: 15px;
+  color: var(--color-blue);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.UserGitProfile a:hover {
+  color: var(--color-blue);
+  filter: brightness(1.3);
 }
 
 .ItemUnderline {
@@ -132,18 +307,15 @@
 }
 
 .ItemUnderline::after {
-  position: absolute;
   content: "";
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  background-color: var(--color-primary);
-  overflow: hidden;
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
-  height: 1px;
-  transition: 0.5s ease;
-  margin-top: 8px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-blue), transparent);
+  transition: width 0.3s ease;
 }
 
 .ItemUnderline:hover::after {
@@ -153,76 +325,206 @@
 .NavItems {
   display: flex;
   flex-direction: column;
-  align-content: center;
-
-  margin: 5px;
+  padding: 16px 12px;
+  gap: 4px;
+  flex: 1;
 }
-.NavItems button {
+
+.NavItem {
   position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--color-primary);
-  padding: 13px 0;
-  outline: none;
-  font-size: 15px;
-  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  background: transparent;
   border: none;
-  cursor: pointer;
-}
-.active {
-  background-color: var(--color-blue);
-  color: white !important;
-}
-
-.NavItems button::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-  background-color: rgb(2, 136, 209, 0.2);
-  overflow: hidden;
-  width: 0;
-  height: 100%;
-  transition: 0.5s ease;
-}
-
-.NavItems button:hover::before {
-  width: 100%;
-}
-
-.RemarksSection {
-  border-top: 1px solid var(--color-background-light);
-  bottom: 0 !important;
-}
-.RemarksSection p {
-  text-align: center;
-  cursor: pointer;
-  font-size: 15px;
+  border-radius: 8px;
   color: var(--color-primary);
-}
-.RemarksSection p:hover {
-  color: white;
-  transition: 0.2s;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  animation: slideInFromLeft 0.5s ease forwards;
+  opacity: 0;
 }
 
+.NavItem:nth-child(1) { animation-delay: 0.1s; }
+.NavItem:nth-child(2) { animation-delay: 0.2s; }
+.NavItem:nth-child(3) { animation-delay: 0.3s; }
+.NavItem:nth-child(4) { animation-delay: 0.4s; }
+.NavItem:nth-child(5) { animation-delay: 0.5s; }
+
+.NavItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--color-blue), #00c6ff);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px var(--color-blue);
+}
+
+.NavItem::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.NavItem:hover::after {
+  left: 100%;
+}
+
+.NavItem:hover {
+  background: var(--color-background-light);
+  color: white;
+  transform: translateX(4px);
+}
+
+.NavItem:hover::before {
+  transform: scaleY(1);
+}
+
+.NavIcon {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.NavItem:hover .NavIcon {
+  transform: scale(1.15) rotate(-5deg);
+  color: var(--color-blue);
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1.15) rotate(-5deg) translateY(0);
+  }
+  50% {
+    transform: scale(1.2) rotate(-5deg) translateY(-3px);
+  }
+}
+
+.NavLabel {
+  flex: 1;
+}
+
+.NavItem.active {
+  background: var(--color-background-light);
+  color: var(--color-blue);
+}
+
+.NavItem.active::before {
+  transform: scaleY(1);
+}
+
+.NavItem.active .NavIcon {
+  color: var(--color-blue);
+}
+
+.SideBarFooter {
+  border-top: 1px solid var(--color-background-light);
+  padding: 20px 24px 24px;
+}
 
 .SocialLinks {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  padding: 20px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .SocialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--color-background-light);
   color: var(--color-primary);
-  transition: all 0.3s ease;
+  font-size: 18px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--color-background-light);
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.SocialLink:nth-child(1) { animation-delay: 0.6s; }
+.SocialLink:nth-child(2) { animation-delay: 0.7s; }
+.SocialLink:nth-child(3) { animation-delay: 0.8s; }
+
+.SocialLink::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: var(--color-blue);
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+  opacity: 0.2;
+}
+
+.SocialLink:hover::before {
+  width: 120%;
+  height: 120%;
 }
 
 .SocialLink:hover {
+  background: var(--color-blue);
+  color: white;
+  border-color: var(--color-blue);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.SocialLink svg {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.SocialLink:hover svg {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.RemarksSection {
+  text-align: center;
+}
+
+.RemarksSection p {
+  margin: 4px 0;
+  font-size: 0.8rem;
   color: var(--color-primary);
+  opacity: 0.6;
   transition: all 0.3s ease;
-  scale: 1.3;
+}
+
+.RemarksName {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  opacity: 0.5;
+}
+
+.RemarksSection:hover p {
+  opacity: 0.9;
+  color: var(--color-blue);
 }

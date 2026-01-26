@@ -44,27 +44,27 @@ export const Home = () => {
             Hi, I'm <span className="highlight">Mubangizi Allan</span>
           </Typography>
           <Typography variant="h2" className="title">
-            Full-Stack Developer
+            Full-Stack Software Engineer
           </Typography>
           <Typography variant="body1" className="description">
-            Crafting robust and scalable web solutions with modern technologies
+            Building scalable, high-performance web applications with modern
+            technologies and clean architecture
           </Typography>
         </div>
 
         <div className="content-section">
           <Typography variant="body1" className="bio">
-            I bring extensive expertise and a strong commitment to delivering
-            high-quality solutions. My comprehensive knowledge of the software
-            development lifecycle, coupled with a versatile skill set, allows me
-            to address complex challenges effectively.
+            I specialize in end-to-end software development, transforming
+            complex requirements into elegant, maintainable solutions. With deep
+            expertise across the full development lifecycle, I deliver
+            production-ready applications that scale and perform.
           </Typography>
 
           <Typography variant="body1" className="bio">
-            I am goal-driven, reliable, and adaptable, consistently meeting
-            demanding standards and thriving in dynamic work environments. My
-            proven track record of creating innovative, robust software
-            highlights my value as a team member, ready to take on diverse
-            projects and consistently exceed expectations.
+            My approach combines technical precision with pragmatic
+            problem-solving. I excel in fast-paced environments, consistently
+            shipping robust software that meets business objectives while
+            maintaining high code quality standards.
           </Typography>
 
           <div className="cta-buttons">

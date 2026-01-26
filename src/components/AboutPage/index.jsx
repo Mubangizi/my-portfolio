@@ -1,9 +1,15 @@
 import React from "react";
 import Layout from "../Layout";
-import CodeOutlinedIcon from "@material-ui/icons/CodeOutlined";
-import BuildOutlinedIcon from "@material-ui/icons/BuildOutlined";
-import DescriptionOutlinedIcon from "@material-ui/icons/DescriptionOutlined";
-import CloudOutlinedIcon from "@material-ui/icons/CloudOutlined";
+import {
+  FaCode,
+  FaServer,
+  FaCloud,
+  FaLayerGroup,
+  FaDatabase,
+  FaShieldAlt,
+  FaRocket,
+  FaMobile,
+} from "react-icons/fa";
 import "./About.css";
 
 export const About = () => {
@@ -19,12 +25,12 @@ export const About = () => {
         <div className="AboutInfo">
           <h3>Mubangizi Allan</h3>
           <p className="AboutDescription">
-            I am a seasoned Full-Stack Developer with over 5 years of experience
-            in building enterprise-grade web systems. My expertise spans the
-            entire software development lifecycle, from architecture design to
-            deployment and maintenance. I excel at creating scalable,
-            high-performance solutions that drive business growth while
-            maintaining exceptional code quality and user experience.
+            Full-Stack Software Engineer with 6+ years of experience delivering
+            enterprise-grade web applications. I architect and build scalable
+            systems from concept to production, specializing in modern JavaScript
+            ecosystems, cloud infrastructure, and high-performance backends.
+            Proven track record of shipping maintainable code that drives
+            measurable business impact.
           </p>
           <div className="AboutHighlights">
             <div className="HighlightItem">
@@ -65,46 +71,91 @@ export const About = () => {
       <div className="AboutServices">
         <div className="ServiceCard">
           <div className="ServiceIcon">
-            <DescriptionOutlinedIcon />
+            <FaLayerGroup />
           </div>
           <h4 className="ServiceTitle">System Architecture</h4>
           <p className="ServiceInfo">
-            Designing scalable and maintainable system architectures with a
-            focus on performance, security, and future-proofing. Expert in
-            microservices and cloud-native solutions.
+            Designing distributed systems that scale. Expertise in microservices
+            architecture, event-driven patterns, and system design principles.
+            Focus on maintainability, reliability, and performance optimization.
           </p>
         </div>
         <div className="ServiceCard">
           <div className="ServiceIcon">
-            <CodeOutlinedIcon />
+            <FaCode />
           </div>
           <h4 className="ServiceTitle">Full-Stack Development</h4>
           <p className="ServiceInfo">
-            Building robust web applications using modern frameworks and best
-            practices. Specializing in React, Node.js, and cloud technologies
-            for scalable solutions.
+            Building production-ready applications with React, Node.js, and
+            TypeScript. Expert in state management, API integration, and
+            responsive UI development. Deliver clean, maintainable code that
+            scales.
           </p>
         </div>
         <div className="ServiceCard">
           <div className="ServiceIcon">
-            <BuildOutlinedIcon />
+            <FaServer />
           </div>
-          <h4 className="ServiceTitle">API Development</h4>
+          <h4 className="ServiceTitle">Backend Engineering</h4>
           <p className="ServiceInfo">
-            Creating secure, well-documented RESTful APIs and GraphQL services.
-            Implementing authentication, rate limiting, and comprehensive error
-            handling.
+            Developing RESTful and GraphQL APIs with robust authentication and
+            authorization. Implementing caching strategies, rate limiting, and
+            comprehensive monitoring for production systems.
           </p>
         </div>
         <div className="ServiceCard">
           <div className="ServiceIcon">
-            <CloudOutlinedIcon />
+            <FaDatabase />
           </div>
-          <h4 className="ServiceTitle">DevOps & Cloud</h4>
+          <h4 className="ServiceTitle">Database Engineering</h4>
           <p className="ServiceInfo">
-            Implementing CI/CD pipelines, containerization, and cloud
-            infrastructure. Expert in AWS, Docker, and Kubernetes for scalable
-            deployment solutions.
+            Designing efficient database schemas and optimizing queries for
+            performance. Proficient in SQL and NoSQL databases, data modeling,
+            indexing strategies, and migration planning.
+          </p>
+        </div>
+        <div className="ServiceCard">
+          <div className="ServiceIcon">
+            <FaCloud />
+          </div>
+          <h4 className="ServiceTitle">Cloud & DevOps</h4>
+          <p className="ServiceInfo">
+            Implementing CI/CD pipelines and infrastructure as code. Expertise
+            in AWS services, Docker containerization, Kubernetes orchestration,
+            and automated deployment workflows.
+          </p>
+        </div>
+        <div className="ServiceCard">
+          <div className="ServiceIcon">
+            <FaShieldAlt />
+          </div>
+          <h4 className="ServiceTitle">Security & Authentication</h4>
+          <p className="ServiceInfo">
+            Implementing secure authentication flows with OAuth2, JWT, and SSO.
+            Expertise in encryption, security best practices, vulnerability
+            assessment, and compliance standards.
+          </p>
+        </div>
+        <div className="ServiceCard">
+          <div className="ServiceIcon">
+            <FaRocket />
+          </div>
+          <h4 className="ServiceTitle">Performance Optimization</h4>
+          <p className="ServiceInfo">
+            Analyzing and optimizing application performance across the stack.
+            Proficient in profiling tools, caching strategies, CDN integration,
+            and load testing for high-traffic systems.
+          </p>
+        </div>
+        <div className="ServiceCard">
+          <div className="ServiceIcon">
+            <FaMobile />
+          </div>
+          <h4 className="ServiceTitle">Mobile Development</h4>
+          <p className="ServiceInfo">
+            Building cross-platform mobile applications with React Native.
+            Experience with native integrations, offline-first architecture, and
+            app store deployment processes.
           </p>
         </div>
       </div>
